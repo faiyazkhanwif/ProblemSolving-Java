@@ -5,6 +5,7 @@
  */
 package hackerrankjava;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -13,10 +14,8 @@ import java.util.Scanner;
  */
 public class Test {
     public static void main(String[] args) {
-        int i = 10;
-        int j = i;
-        j = 15;
-        System.out.println(i+"="+j);
+        
+        
     }
     
 }
