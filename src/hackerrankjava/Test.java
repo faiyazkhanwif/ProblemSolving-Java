@@ -14,7 +14,9 @@ import java.util.Scanner;
  */
 public class Test {
     public static void main(String[] args) {
-        
+        String x = "xyz";
+        String y = "efg";
+        System.out.println(x.compareTo(y));
         
     }
     
