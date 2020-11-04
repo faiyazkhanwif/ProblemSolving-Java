@@ -17,18 +17,11 @@ import java.util.Stack;
 public class Test {
 
     public static void main(String[] args) {
-        String [] st = new String [3];
-        st[0] = "pw";
-        st[1] = "gj";
-        st[2] = "af";
-        Arrays.sort(st);
-        for (int i = 0; i < st.length; i++) {
-            System.out.println(st[i]);
-        }   
-        
-        String g = "z";
-        String h = "a";
-        System.out.println(g.compareTo(h));
+        String m = "hi";
+        String u = "hi";
+        if (m==u) {
+            System.out.println("d");
+        }
     }
 
 }
