@@ -5,19 +5,28 @@
  */
 package hackerrankjava;
 
-import java.util.Arrays;
-import java.util.Scanner;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Stack;
 
 /**
  *
  * @author faiya
  */
 public class Test {
+
     public static void main(String[] args) {
-        String x = "xyz";
-        String y = "efg";
-        System.out.println(x.compareTo(y));
+        Stack s = new Stack();
+        s.push("{");
+        s.push("}");
+        s.push("(");
+        s.push(")");
+        int f = s.search("}");
+        System.out.println(f);
+        s.indexOf("(");
+        
+        
         
     }
-    
+
 }
