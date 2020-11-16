@@ -5,18 +5,10 @@
  */
 package hackerrankjava;
 
-import java.text.SimpleDateFormat;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.Stack;
-
 /**
  *
  * @author faiya
  */
-public class Test {
-
-    public static void main(String[] args) {
-        System.out.println("");
-    }
+public class VowelSubstringALT {
+    
 }
