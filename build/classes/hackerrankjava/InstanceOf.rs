@@ -1,0 +1,4 @@
+hackerrankjava.Rockstar
+hackerrankjava.Student
+hackerrankjava.InstanceOf
+hackerrankjava.Hacker
