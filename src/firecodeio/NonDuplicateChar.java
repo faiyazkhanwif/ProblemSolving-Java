@@ -13,15 +13,15 @@ public class NonDuplicateChar {
 
     public static Character firstNonRepeatedCharacter(String str) {
         String x = str;
-        System.out.println(x);
+        //System.out.println(x);
         int count = 0;
         for (int i = 0; i < x.length(); i++) {
             char temp = x.charAt(i);
-            System.out.println("Checking: " + temp);
+            //System.out.println("Checking: " + temp);
             for (int j = 0; j < x.length(); j++) {
                 if (temp == x.charAt(j) && i!=j) {
-                    System.out.println("temp = "+temp);
-                    System.out.println("x.charAt(j)= "+x.charAt(j));
+                    //System.out.println("temp = "+temp);
+                    //System.out.println("x.charAt(j)= "+x.charAt(j));
                     count += 1;
                 }
             }
