@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package firecodeio;
+package firecodeio.level1;
 
 /**
  *
  * @author faiya
  */
-public class DeleteHeadNodeSinglyLinkedList {
+public class NodeAtFrontSinglyLinkedList {
 
     class ListNode {
 
@@ -21,11 +21,9 @@ public class DeleteHeadNodeSinglyLinkedList {
         }
     }
 
-    public ListNode deleteAtHead(ListNode head) {
-        if(head == null){
-            return null;
-        }
-        head = head.next;
-        return head;
+    public ListNode insertAtHead(ListNode head, int data) {
+        ListNode ln = new ListNode(data);
+        ln.next = head;
+        return ln;
     }
 }
