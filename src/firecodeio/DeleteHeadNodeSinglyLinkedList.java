@@ -9,7 +9,7 @@ package firecodeio;
  *
  * @author faiya
  */
-public class NodeAtFrontSinglyLinkedList {
+public class DeleteHeadNodeSinglyLinkedList {
 
     class ListNode {
 
@@ -21,9 +21,11 @@ public class NodeAtFrontSinglyLinkedList {
         }
     }
 
-    public ListNode insertAtHead(ListNode head, int data) {
-        ListNode ln = new ListNode(data);
-        ln.next = head;
-        return ln;
+    public ListNode deleteAtHead(ListNode head) {
+        if(head == null){
+            return null;
+        }
+        head = head.next;
+        return head;
     }
 }
