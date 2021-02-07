@@ -13,6 +13,9 @@ package firecodeio.level2;
 public class BinaryRepresentation {
 
     public static String computeBinary(int val) {
+        if (val == 0) {
+            return "0";
+        }
         int temp = val;
         String binres = "";
         while(temp!=0){
