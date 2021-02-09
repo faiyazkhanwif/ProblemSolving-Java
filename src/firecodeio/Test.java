@@ -14,8 +14,6 @@ import java.util.ArrayList;
 public class Test {
 
     public static void main(String[] args) {
-        String ng = "ag";
-        ng+=9;
-        System.out.println(ng);
+        System.out.println(2^5);
     }
 }
