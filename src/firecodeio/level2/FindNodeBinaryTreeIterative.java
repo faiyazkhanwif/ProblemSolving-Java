@@ -11,6 +11,7 @@ import java.util.Stack;
  *
  * @author faiya
  */
+//Interview Question from InfoSys
 public class FindNodeBinaryTreeIterative {
 
     class TreeNode {
@@ -37,6 +38,11 @@ public class FindNodeBinaryTreeIterative {
         if (root==null) {
             return null;
         }
+        if (root.left==null && root.right==null) {
+            if (root.data!=val) {
+                return null;
+            }
+        }
         Stack st = new Stack();
         st.add(root);
         while (root.data != val || !st.empty()) {
@@ -44,11 +50,11 @@ public class FindNodeBinaryTreeIterative {
             if (temp.data == val) {
                 return temp;
             }
-            if (root.right != null) {
-                st.add(root.right);
+            if (temp.right != null) {
+                st.add(temp.right);
             }
-            if (root.left != null) {
-                st.add(root.left);
+            if (temp.left != null) {
+                st.add(temp.left);
             }
         }
         return null;
