@@ -19,7 +19,6 @@ public class RevIntWithoutAdditionalHeapSpace {
             tobeused = val%10;
             rev = rev*10+tobeused;
             val = val/10;
-            System.out.println("hi");
         }
         return rev;
     }
