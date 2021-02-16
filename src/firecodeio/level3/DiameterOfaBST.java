@@ -59,8 +59,8 @@ public class DiameterOfaBST {
         int rdiameter = diameter(root.right);
 
         int goesthroughroot =  1 + leftheight + rightheight;
-        int doesnotgoesthroughroot =  Math.max(ldiameter, rdiameter);
+        int doesnotgothroughroot =  Math.max(ldiameter, rdiameter);
         
-        return Math.max(goesthroughroot, doesnotgoesthroughroot);
+        return Math.max(goesthroughroot, doesnotgothroughroot);
     }
 }
