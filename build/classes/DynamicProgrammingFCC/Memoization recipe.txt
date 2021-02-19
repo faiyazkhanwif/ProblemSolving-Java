@@ -1,0 +1,9 @@
+1. Make It Work.
+	-- Visualize the problem as a tree.
+	-- Implement the tree using recursion.
+	-- Test it.
+
+2. Make it efficient (DP).
+	-- Add memo object (HashMap maybe).
+	-- Add a base case to return memo values.
+	-- Store return values into the memo.
