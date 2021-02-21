@@ -1,0 +1,26 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package LeetCode;
+
+/**
+ *
+ * @author faiya
+ */
+public class Test {
+    public static void main(String[] args) {
+        int x = 10;
+        String xt = "";
+        while (x!=0){
+            xt+=String.valueOf(x%2);
+            x = x/2;
+        }
+        String ans = "";
+        for (int i = xt.length()-1; i >=0 ; i--) {
+            ans+=String.valueOf(xt.charAt(i));
+        }
+        System.out.println(ans);
+    }
+}
