@@ -9,8 +9,6 @@ package LeetCode;
  *
  * @author faiya
  */
-public class Test {
-    public static void main(String[] args) {
-        System.out.println(1/2);
-    }
+public class ReverseALinkedList {
+    
 }
