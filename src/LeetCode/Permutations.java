@@ -28,7 +28,7 @@ public class Permutations {
 
     public void work(int[] nums, List<Integer> perms, boolean[] chckr, List<List<Integer>> res) {
         if (nums.length == perms.size()) {
-            res.add(perms = new ArrayList<>());
+            res.add(new ArrayList<>(perms));
             return;
         }
         for (int i = 0; i < nums.length; i++) {
