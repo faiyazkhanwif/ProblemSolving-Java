@@ -39,6 +39,15 @@ public class Permutations {
             perms.add(nums[i]);
             work(nums, perms, chckr, res);
             perms.remove(perms.size() - 1);
+            /*
+            To generate all possible permutations, we need to remove the least recently 
+            added element while we are going up the recursive call stack.
+            In the first iteration of the for loop we add all permutations, that start
+            with nums[0]. Then, before we can begin building all permutations starting 
+            with nums[1], we need to clear the perms (which currently contains 
+            permutations from the first iteration of the for loop) - that's exactly what 
+            perms.remove(perms.size() - 1) line does.
+            */
             chckr[i] = false;
         }
     }
