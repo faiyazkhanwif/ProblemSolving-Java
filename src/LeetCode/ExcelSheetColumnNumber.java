@@ -5,17 +5,21 @@
  */
 package LeetCode;
 
-import java.util.ArrayList;
-import java.util.Collections;
-
 /**
  *
  * @author faiya
  */
-public class Test {
+public class ExcelSheetColumnNumber {
 
+    static int titleToNumber(String s) {
+        int ans = 0;
+        for (int i = 0; i < s.length(); i++) {
+            ans = ans*26+(s.charAt(i)-'A'+1);
+        }
+        return ans;
+    }
     
     public static void main(String[] args) {
-        System.out.println('Z'-'A'+1);
+        System.out.println(titleToNumber("AB"));
     }
 }
