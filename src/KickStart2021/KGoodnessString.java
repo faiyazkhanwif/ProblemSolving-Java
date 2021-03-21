@@ -23,26 +23,26 @@ public class KGoodnessString {
             //System.out.println("---------");
             //System.out.println(str);
             int gds = 0;
-            for (int j = 1; j <= n; j++) {
-                if (j <= n / 2) {
+            for (int j = 0; j < n; j++) {
+                if (j < n / 2) {
                     //System.out.println("j = " + j);
-                    int temp = n - j + 1;
+                    int temp = n - j - 1;
                     //System.out.println("temp = " + temp);
-                    temp = temp - 1;
-                    if (temp <= n && str.charAt(j - 1) != str.charAt(temp)) {
+                    //temp = temp - 1;
+                    if (str.charAt(j) != str.charAt(temp)) {
                         //System.out.println(str.charAt(j - 1) + "---------" + str.charAt(temp));
                         gds++;
                     }
                 }
             }
             //System.out.println(gds);
-            if (gds >= k) {
-                System.out.println("Case #" + (i + 1) + ": " + 0);
-            } else {
-                double ans = k - gds;
-                double ans2 = (ans/2);
-                System.out.println("Case #" + (i + 1) + ": " + (int)Math.ceil(ans2));
-            }
+            //if (gds >= k) {
+            //    System.out.println("Case #" + (i + 1) + ": " + 0);
+            //} else {
+                int ans = Math.abs(k - gds);
+                //double ans2 = (ans/2);
+                System.out.println("Case #" + (i + 1) + ": " + (int)Math.ceil(ans));
+           // }
 
         }
     }
