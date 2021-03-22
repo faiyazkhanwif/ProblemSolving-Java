@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package LeetCode;
+package LeetCode.dfs;
 
 /**
  *
  * @author faiya
  */
-public class MaximumDepthBinaryTree {
+public class BalancedBinaryTree {
 
     class TreeNode {
 
@@ -31,18 +31,22 @@ public class MaximumDepthBinaryTree {
         }
     }
 
-    public int maxDepth(TreeNode root) {
-        if (root == null) {
-            return 0;
-        }
-        int left = maxDepth(root.left);
-        int right = maxDepth(root.right);
-        int height;
-        if (left > right) {
-            height = 1 + left;
-        } else {
-            height = 1 + right;
-        }
-        return height;
-    }
+    private boolean result = true;
+
+public boolean isBalanced(TreeNode root) {
+    maxDepth(root);
+    return result;
+}
+
+public int maxDepth(TreeNode root) {
+    // Add below line to come out of recursion quickly as soon as imbalance is found 
+    if (!result) return 0;
+    if (root == null)
+        return 0;
+    int l = maxDepth(root.left);
+    int r = maxDepth(root.right);
+    if (Math.abs(l - r) > 1)
+        result = false;
+    return 1 + Math.max(l, r);
+}
 }

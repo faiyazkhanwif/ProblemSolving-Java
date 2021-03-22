@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package LeetCode;
+package LeetCode.dfs;
 
 /**
  *
  * @author faiya
  */
-public class SymmetricTree {
+public class MaximumDepthBinaryTree {
 
     class TreeNode {
 
@@ -31,24 +31,18 @@ public class SymmetricTree {
         }
     }
 
-    public boolean isSymmetric(TreeNode root) {
+    public int maxDepth(TreeNode root) {
         if (root == null) {
-            return true;
+            return 0;
         }
-        return check(root.left, root.right);
-    }
-
-    public boolean check(TreeNode leftsub, TreeNode rightsub) {
-        if (leftsub == null && rightsub == null) {
-            return true;
+        int left = maxDepth(root.left);
+        int right = maxDepth(root.right);
+        int height;
+        if (left > right) {
+            height = 1 + left;
+        } else {
+            height = 1 + right;
         }
-        if (leftsub == null || rightsub == null) {
-            return false;
-        }
-        if (leftsub.val == rightsub.val) {
-            return check(leftsub.left, rightsub.right) && check(leftsub.right, rightsub.left);
-
-        }
-        return false;
+        return height;
     }
 }
