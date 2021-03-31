@@ -12,16 +12,20 @@ package LeetCode.array;
 public class FindHighestAltitude {
 
     public int largestAltitude(int[] gain) {
-        int arr[] = new int[gain.length+1];
-        arr[0] = 0;
+        //int arr[] = new int[gain.length+1];
+        //arr[0] = 0;
         int ind = 1;
         int alt = 0;
         int res = alt;
         for (int i = 1; i < gain.length; i++) {
-            alt = arr[i-1]+alt;
+            alt = gain[i-1]+alt;
             if (alt>res) {
                 res = alt;
             }
+        }
+        alt = gain[gain.length-1]+alt;
+        if (alt>res) {
+            res = alt;
         }
         return res;
     }
