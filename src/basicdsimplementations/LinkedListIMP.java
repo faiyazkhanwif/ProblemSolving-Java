@@ -61,12 +61,33 @@ public class LinkedListIMP {
                 insertfirst(data);
                 return;
             }
-            for (int i = 0; i < index-1; i++) {
+            for (int i = 0; i < index - 1; i++) {
                 curr = curr.next;
             }
             node.next = curr.next;
             curr.next = node;
-            
+
+        }
+
+        public void removeFirst() {
+            head = head.next;
+        }
+
+        public void removeLast() {
+            Node curr = head;
+            while (curr.next.next != null) {
+                curr = curr.next;
+            }
+            curr.next = null;
+        }
+
+        public void removeAt(int index) {
+            Node curr = head;
+            for (int i = 0; i < index-1; i++) {
+                curr = curr.next;
+            }
+            Node delelem = curr.next;
+            curr.next = delelem.next;
         }
     }
 
@@ -77,14 +98,28 @@ public class LinkedListIMP {
         ml.insert(9);
         ml.insert(4);
         ml.insert(1);
-        
+        ml.insert(4);
+
         ml.insertfirst(91);
         ml.insertfirst(41);
-        
+
         ml.insertAt(65, 3);
         ml.insertAt(15, 6);
         ml.insertAt(999, 0);
-
+        ml.show();
+        ml.removeFirst();
+        ml.show();
+        ml.removeLast();
+        ml.show();
+        ml.removeLast();
+        ml.show();
+        
+        ml.removeAt(2);
+        
+        ml.show();
+        
+        ml.removeAt(4);
+        
         ml.show();
     }
 }
