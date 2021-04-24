@@ -29,14 +29,16 @@ public class RemoveLinkedListElements {
         }
     }
     public ListNode removeElements(ListNode head, int val) {
+        while(head!=null && head.val==val){
+            head = head.next;
+        }
         ListNode curr = head;
-        ListNode prev = null;
-        while (curr!=null){
-            if (curr.val==val) {
-                prev.next = curr.next;
+        while(curr.next!=null){
+            if (curr.next.val==val && curr.next.next!=null) {
+                curr.next = curr.next.next;
+            }else if (curr.next.val==val && curr.next.next==null){
+                curr.next = null;
             }
-            prev = curr;
-            curr = curr.next;
         }
         return head;
     }
