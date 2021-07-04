@@ -12,7 +12,6 @@ import java.util.HashMap;
  * @author faiya
  */
 public class LC013 {
-
     public int romanToInt(String s) {
         HashMap<Character, Integer> hm = new HashMap<>();
         hm.put('I', 1);
