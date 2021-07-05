@@ -1,2 +1,0 @@
-hackerrankjava.VowelSubstring
-hackerrankjava.main

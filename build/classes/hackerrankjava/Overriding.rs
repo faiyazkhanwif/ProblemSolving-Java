@@ -1,3 +1,0 @@
-hackerrankjava.Sports
-hackerrankjava.Overriding
-hackerrankjava.Soccer

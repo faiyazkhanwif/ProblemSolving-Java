@@ -1,2 +1,0 @@
-hackerrankjava.Printer
-hackerrankjava.JavaGenerics

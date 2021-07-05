@@ -9,7 +9,7 @@ package roadtohundred;
  *
  * @author faiya
  */
-public class LC88 {
+public class LC088 {
 
     public static void merge(int[] nums1, int m, int[] nums2, int n) {
 

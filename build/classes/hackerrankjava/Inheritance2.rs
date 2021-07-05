@@ -1,3 +1,0 @@
-hackerrankjava.Adder
-hackerrankjava.Inheritance2
-hackerrankjava.Arithmetic

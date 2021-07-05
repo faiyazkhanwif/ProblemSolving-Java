@@ -1,2 +1,0 @@
-hackerrankjava.Solution
-hackerrankjava.FizzBuzz

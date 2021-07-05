@@ -1,2 +1,0 @@
-hackerrankjava.Result
-hackerrankjava.DateAndTime
