@@ -5,11 +5,13 @@
  */
 package LeetCode.dsI;
 
+import java.util.HashSet;
+
 /**
  *
  * @author faiya
  */
-public class LC206 {
+public class LC083 {
 
     public class ListNode {
 
@@ -29,17 +31,20 @@ public class LC206 {
         }
     }
 
-    public ListNode reverseList(ListNode head) {
-        if (head == null || head.next == null) {
-            return head;
-        }
+    public ListNode deleteDuplicates(ListNode head) {
+        HashSet<Integer> hs = new HashSet<>();
+        ListNode curr = head;
         ListNode prev = null;
-        while (head!=null){
-            ListNode next = head.next;
-            head.next = prev;
-            prev = head;
-            head = next;
+        while(curr!=null){
+            if (!hs.contains(curr.val)) {
+                hs.add(curr.val);
+                prev = curr;
+                curr = curr.next;
+            }else{
+                prev.next = curr.next;
+                curr = curr.next;
+            }
         }
-        return prev;
+        return head;
     }
 }
