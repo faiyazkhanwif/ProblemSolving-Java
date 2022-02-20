@@ -5,20 +5,17 @@
  */
 package random;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-
 /**
  *
  * @author faiya
  */
+public abstract class Test {
 
-public class Test {
-    
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         byte x = 6;
         float y = 9;
-        System.out.println(x+y);
+        System.out.println(x + y);
     }
+
+    public abstract void test();
 }
